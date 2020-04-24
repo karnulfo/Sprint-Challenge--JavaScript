@@ -17,7 +17,7 @@ function myFunction() {
 myFunction();
 
 // Explanation: 
-//It can accest it because the function nested function is part of the same function in which the variable internal is part of. Basically, interal will be available only to the brackets within myFunction.
+//It can access it because the function nested function is part of the same function in which the variable internal is part of. Basically, interal will be available only to the brackets within myFunction.
 
 /* Task 2: Counter */
 function sumation(parameter){

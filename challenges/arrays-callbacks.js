@@ -20,12 +20,12 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-// const displayNames = [];
 
+let displayNames = zooAnimals.forEach(item => console.log(`${item.animal_name}, ${item.scientific_name}`))
 
-const displayNames = zooAnimals.forEach(function(arr){
-  return `${arr.animal_name}, ${arr.scientific_name} `
-})
+// const displayNames = zooAnimals.forEach(function(arr){
+//   return `${arr.animal_name}, ${arr.scientific_name} `
+// })
 console.log(displayNames);
 // })
 
@@ -43,11 +43,8 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = zooAnimals.filter(function(item){
-  if (item.population <5)
-    return `${item.name}`
-})
-// (item => item.population < 5)
+const lowPopulationAnimals = zooAnimals.filter(item => item.population < 5) 
+
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
@@ -82,15 +79,19 @@ function consume(a, b, c){
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-function add(a, b){
-  return a + b; 
-}
-function multiply(a, b){
-  return a * b; 
-}
-function greeting(name, lastName){
-  return `Hello ${name} ${lastName}, nice to meet you!`
-}
+add = (a,b) => a +b ;
+// function add(a, b){
+//   return a + b; 
+// }
+multiply = (a,b) => a * b;
+// function multiply(a, b){
+//   return a * b; 
+// }
+
+greeting = (name, lastName) => `Hello ${name} ${lastName}, nice to meet you!`
+// function greeting(name, lastName){
+//   return `Hello ${name} ${lastName}, nice to meet you!`
+// }
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 console.log(consume(2, 2, add)); // 4
 console.log(consume(10, 16, multiply)); // 160
